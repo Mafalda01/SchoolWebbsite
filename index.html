@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width">
+	  <meta name="beskrivning" content="Nyheter om Järfälla Gymnasium och Järfälla området">
+	  <meta name="keywords" content="skola, Järfälla, Nyheter">
+	  <meta name="Author" content="Mafalda Nicolau">
+	  <title>Järfälla Gymnasium | Nyheter</title>
+	  <link rel="stylesheet" type="text/css" href="./css/style.css"
+>
+	</head>
+	<body>
+	  <header>
+	  	<div class="container">
+	  		<div id="branding">
+	  			<h1><span1 class="highlight">Järfälla</span1> Gymnasium</h1>
+	  		</div>
+	  		<nav>
+	  			<ul>
+	  				<li class="current"><a href="index.html">Nyheter</a></li>
+	  				<li><a href="omoss.html">Om oss</a></li>
+	  				<li><a href="kontakt.html">Kontakt</a></li>
+	  				<li><a href="quiz.html">Quiz</a></li>
+	  			</ul>
+	  		</nav>
+	  	</div>
+	  </header>
+
+	  <section id="showcase">
+	  	<h1>Sommarlov om...</h1>
+				<div id="clockdiv">
+				  <div>
+				    <span class="days"></span>
+				    <div class="smalltext">Days</div>
+				  </div>
+				  <div>
+				    <span class="hours"></span>
+				    <div class="smalltext">Hours</div>
+				  </div>
+				  <div>
+				    <span class="minutes"></span>
+				    <div class="smalltext">Minutes</div>
+				  </div>
+				  <div>
+				    <span class="seconds"></span>
+				    <div class="smalltext">Seconds</div>
+				  </div>
+				</div>
+<script>
+	function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+
+var deadline = new Date(Date.parse(new Date()) + 6 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
+</script>
+	  </section>
+
+	  <section id="newsletter">
+	  	<div class="container">
+	  		<h1>Prenumerera på vårt Nyhetsbrev</h1>
+	  		<form>
+	  			<input type="email" placeholder="Enter Email...">
+	  			<button type="submit" class="button_1">Prenumerera</button>
+	  		</form>
+	  	</div>
+	  </section>
+
+	  <section id="boxes">
+	  	<div class="container">
+	  		<div class="box">
+	  			<img src="./img/loga.png">
+	  			<h3>Välkommen till Järfälla gymnasium</h3>
+	  			<p>Järfälla gymnasium erbjuder en bredd av spännande program. Här finns såväl högskoleförberedande utbildningar, yrkesprogram, introduktionsprogram som gymnasiesärskola. Du kan välja utbildningar som gör dig förberedd för att plugga vidare eller för att gå direkt ut i arbetslivet.</p>
+	  		</div>
+	  		<div class="box">
+	  			<img src="./img/loga.png">
+	  			<h3>Din framtid börjar nu</h3>
+	  			<p>Vi samarbetar både med företag och med högskolor. Kultur, sport, egen matsal, SYV, skolhälsovård och ett stort bibliotek gör det lättare att studera och få bra resultat. Det är högt i tak och bra stämning. Här kan alla trivas. Du också!
+
+				Järfälla gymnasium är skolan där du får vara den du är - och blir uppskattad för det!</p>
+	  		</div>
+	  		<div class="box">
+	  			<img src="./img/loga.png">
+	  			<h3>Spets och ett fjärde år</h3>
+	  			<p>En nyhet för i år är att Skolverket beviljat oss att få starta en riksrekryterande spetsutbildning inom det Estetiska programmet, Illustration & Grafisk formgivning - den enda i hela Sverige! Skolverket har även beviljat oss ett fjärde år på Teknikprogrammet.</p>
+	  		</div>
+	  	</div>
+	  </section>
+
+	  <footer>
+	  	<p>Järfälla Gymnasium, Mafalda Nicolau</p>
+	  </footer>
+	</body>
+</html>
