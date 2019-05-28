@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta name="beskrivning" content="Nyheter om Järfälla Gymnasium och Järfälla området">
+	  <meta name="keywords" content="skola, Järfälla, Nyheter">
+	  <meta name="Author" content="Mafalda Nicolau">
+	  <title>Järfälla Gymnasium | Om Oss</title>
+	  <link rel="stylesheet" type="text/css" href="./css/style.css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	<body>
+	  <header>
+	  	<div class="container">
+	  		<div id="branding">
+	  			<h1><span1 class="highlight">Järfälla</span1> Gymnasium</h1>
+	  		</div>
+	  		<nav>
+	  			<ul>
+	  				<li><a href="index.html">Nyheter</a></li>
+	  				<li><a href="omoss.html">Om oss</a></li>
+	  				<li><a href="kontakt.html">Kontakt</a></li>
+	  				<li class="current"><a href="quiz.html">Quiz</a></li>
+	  			</ul>
+	  		</nav>
+	  	</div>
+	  </header>
+
+	  <section id="newsletter">
+	  	<div class="container">
+	  		<h1>Prenumerera på vårt Nyhetsbrev</h1>
+	  		<form>
+	  			<input type="email" placeholder="Enter Email...">
+	  			<button type="submit" class="button_1">Prenumerera</button>
+	  		</form>
+	  	</div>
+	  </section>
+
+								 <!--  Top section   -->
+				<div class="intro py-3 bg-white text-center">
+				  <div class="container">
+				    <h2 class="text-primary display-3 my-4">Quiz Om Järfälla Gymnasium</h2>
+				  </div>
+				</div>
+	  <section id="main">
+	  	<div class="container">
+	  		<article id="main-col">
+	  			<h1 class="page-title"></h1>
+  
+	  			<ul id="services">
+	  				<form name="JärfällaQuiz">
+	  				<li>	
+	  					1. När grundades Järfälla Gymnasium?<br>
+	  					<input type="radio" name="q1" value="a">70-talet</br>
+	  					<input type="radio" name="q1" value="b">90-talet</br><br>
+	  				</li>
+	  				<li>
+	  					2. Hur många olika program finns det på Järfälla Gymnasium?<br>
+	  					<input type="radio" name="q2" value="a">5 olika program</br>
+	  					<input type="radio" name="q2" value="b">11 olika program</br><br>
+	  				</li>
+	  				<li>
+	  					3. Ungefär hur många elever går i Järfälla Gymnasium?<br>
+	  					<input type="radio" name="q3" value="a">Över 700 elever</br>
+	  					<input type="radio" name="q3" value="b">Mindre än 500 elever</br><br>
+	  				</li>
+	  				<li>
+	  					4. Vart ligger Järfälla Gymnasium?<br>
+	  					<input type="radio" name="q4" value="a">Umeå</br>
+	  					<input type="radio" name="q4" value="b">Järfälla</br><br>
+	  				</li>	
+	  				<input type="button" value="Resultat" onclick="check()">
+	  				</form>	  	
+
+	  				<script>
+	  						function check(){
+	  							var q1=document.JärfällaQuiz.q1.value;
+	  							var q2=document.JärfällaQuiz.q2.value;
+	  							var q3=document.JärfällaQuiz.q3.value;
+	  							var q4=document.JärfällaQuiz.q4.value;
+	  							var count=0;
+
+	  							if (q1=="a") {
+	  								count++;
+	  							}
+	  							if (q2=="b") {
+	  								count++;
+	  							}
+	  							if (q3=="a") {
+	  								count++;
+	  							}
+	  							if (q4=="b") {
+	  								count++;
+	  							}
+	  							alert("Du fick "+count+" poäng");
+	  						}
+	  				</script>
+
+	  			</ul>
+	  		</article>
+
+	  		<aside id="sidebar">
+	  			<div class="dark">
+	  				<h3>Frågor</h3>
+	  				<form class="quote">
+	  					<div>
+	  						<label>Namn</label><br>
+	  						<input type="text" placeholder="Namn">
+	  					</div>
+	  					<div>
+	  						<label>Email</label><br>
+	  						<input type="text" placeholder="Email Adress">
+	  					</div>
+	  					<div>
+	  						<label>Meddelande</label><br>
+	  						<textarea placeholder="Meddelande"></textarea>
+	  					</div>
+	  					<button class="button_1" type="submit">Skicka</button>
+	  				</form>
+	  			</div>
+	  		</aside>
+	  	</div>
+	  </section>
+
+	  <footer>
+	  	<p>Järfälla Gymnasium, Mafalda Nicolau</p>
+	  </footer>
+
+		<script></script>
+
+	</body>
+</html>
+
+
